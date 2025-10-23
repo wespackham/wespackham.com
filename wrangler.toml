@@ -1,0 +1,7 @@
+name = "wespackham.com"
+type = "assets"
+account_id = "7790ddd14640bd7bc05ca1e69c9c031c"
+compatibility_date = "2025-10-23"
+
+[site]
+bucket = "./public"
