@@ -1,8 +1,14 @@
 {
-  "name": "wespackham-com",
+  "name": "wespackham-portfolio",
   "main": "src/index.js",
   "compatibility_date": "2025-10-23",
-  "workers_dev": true,
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "wespackham.com/*",
+      "zone_name": "wespackham.com"
+    }
+  ],
   "assets": {
     "directory": "./public"
   }
