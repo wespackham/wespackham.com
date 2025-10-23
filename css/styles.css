@@ -1,0 +1,116 @@
+body {
+    width: 60%;
+    margin: auto;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color: #484848;
+}
+
+h2 {
+    font-family: Futara, Arial, sans-serif;
+    font-size: 2em;
+    color: #646464;
+}
+
+h3 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    color: #484848;
+    padding: 0 .2em;
+}
+
+h4 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    color: #484848;
+    padding: 0 .2em;
+    margin-left: 6px;
+}
+
+p {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#top_heading {
+    margin-top: 15%;
+    margin-left: 3%;
+}
+
+#top_subheading {
+    margin-left: 3%;
+}
+
+.card {
+    background-color: #eeeeee;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1.5px solid #e7e7e7;
+}
+
+.subcard {
+    background-color: white;
+    padding: 2px;
+    margin: 6px;
+    border-radius: 8px;
+    border: 1.5px solid #e7e7e7;
+}
+
+.subcard h4 {
+    color: #484848;
+}
+
+.subcard p, .left p, .right p {
+    margin-left: 10px;
+}
+
+#top_card {
+    margin-top: 80px;
+}
+
+.card_hr {
+    background-color: white;
+    border: 1px solid #e7e7e7;
+}
+
+.left {
+    width: 48%;
+    float: left;
+}
+
+.right {
+    width: 48%;
+    float: right;
+    text-align: right;
+}
+
+.tech {
+    border-radius: 12px;
+    border: 1.5px solid #8582ce;
+    padding: 0 2px;
+    margin: 4px;
+    display: flex;
+    width: 3.2em;
+    background-color: #a3a3ea;
+}
+
+.tech p {
+    font-family: "Droid Sans Mono", "Trebuchet MS", Arial, sans-serif;
+    color: #000081;
+    background-color: #a3a3ea;
+    padding: 0;
+}
