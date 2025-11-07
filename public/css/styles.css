@@ -213,6 +213,19 @@ p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.project {
+    display: none;
+}
+
+.project.active {
+    display: block;
+}
+
+.project-link.active {
+    font-weight: bold;
+    color: #000;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 1024px) {
     .left-column {

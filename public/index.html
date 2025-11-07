@@ -51,9 +51,13 @@
 
     <main class="right-column">
         <section class="projects-container">
-            <h3>Projects</h3>
+            <h3>Projects <a href="#" onclick="showAllProjects(); return false;" style="float: right; font-size: 0.9rem;">See All Projects</a></h3>
+            <p>
+                <a href="#" class="project-link active" onclick="showProject('unraid'); return false;">Home Server</a>,
+                <a href="#" class="project-link" onclick="showProject('data_sprint'); return false;">Data Sprint</a>
+            </p>
 
-            <article class="project">
+            <article id="unraid" class="project active">
                 <h4 class="project-title">Personal Unraid Server</h4>
                 <ul class="project-details">
                     <li>Built and maintained a personal Unraid server from scratch, optimizing performance and troubleshooting hardware and software issues</li>
@@ -68,7 +72,7 @@
                 </div>
             </article>
 
-            <article class="project">
+            <article id="data_sprint" class="project">
                 <h4 class="project-title">Data Science Sprint @ UNC Charlotte (Nov. 2025)</h4>
                 <ul class="project-details">
                     <li>Competed under pressure with an unfamiliar dataset.</li>
@@ -79,6 +83,47 @@
         </section>
     </main>
 </div>
+
+<script>
+    function showProject(projectId) {
+        // Hide all projects
+        const projects = document.querySelectorAll('.project');
+        projects.forEach(project => {
+            project.classList.remove('active');
+        });
+
+        // Remove active class from all project links
+        const links = document.querySelectorAll('.project-link');
+        links.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Show selected project
+        const selectedProject = document.getElementById(projectId);
+        if (selectedProject) {
+            selectedProject.classList.add('active');
+        }
+
+        // Add active class to clicked link
+        event.target.classList.add('active');
+    }
+
+    function showAllProjects() {
+        // Show all projects
+        const projects = document.querySelectorAll('.project');
+        projects.forEach(project => {
+            project.classList.add('active');
+        });
+
+        // Remove active class from all project links
+        const links = document.querySelectorAll('.project-link');
+        links.forEach(link => {
+            link.classList.remove('active');
+        });
+    }
+
+    showProject('unraid');
+</script>
 
 </body>
 </html>
