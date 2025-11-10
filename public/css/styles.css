@@ -8,18 +8,15 @@
 body {
     width: 95%;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
     background-color: #fafafa;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 2rem;
+    font-family: Arial, Geneva, Tahoma, sans-serif;
     color: #333;
-    line-height: 1.6;
 }
 
-/* ==================== HEADER ==================== */
 header {
+    margin-top: .4rem;
     padding-top: 1.5em;
-    padding-bottom: 1em;
     overflow: hidden;
 }
 
@@ -32,7 +29,56 @@ h1 {
     margin: 0;
 }
 
-/* ==================== NAVIGATION ==================== */
+h2 {
+    font-family: Arial, "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #484848;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.3em;
+}
+
+h4 a {
+    color: #484848;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+h4 a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+p {
+    font-family: Arial, "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #1a1a1a;
+}
+
+.social-links {
+
+}
+
+.links a {
+
+}
+
 .top-links {
     float: right;
     margin-top: 1.5em;
@@ -89,59 +135,26 @@ hr {
 }
 
 /* ==================== TYPOGRAPHY ==================== */
-h2 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 1em;
-}
 
-h3 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 1.3em;
-    font-weight: 700;
-    color: #484848;
-    margin-bottom: 0.5em;
-}
 
-h4 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 1.05em;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: 0.3em;
-}
 
-h4 a {
-    color: #484848;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-h4 a:hover {
-    color: #333;
-    text-decoration: underline;
-}
-
-p {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 0.95em;
-    line-height: 1.7;
-    margin-bottom: 0.8em;
-    color: #555;
-}
-
-.dates {
+.experience-dates {
     font-size: 0.9em;
     color: #888;
     font-style: italic;
     margin-bottom: 0.5em;
+    display: inline-flex;
+    justify-content: flex-end;
 }
 
-/* ==================== EXPERIENCE SECTION ==================== */
-.experience-container {
+.experience-company {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-grow: 4;
+}
+
+.sidebar-container {
     margin-top: 1.5em;
 }
 
@@ -151,11 +164,14 @@ p {
     border-bottom: 1px solid #eee;
 }
 
+.experience-position {
+    font-variant: small-caps;
+}
+
 .experience:last-child {
     border-bottom: none;
 }
 
-/* ==================== PROJECTS SECTION ==================== */
 .projects-container {
     width: 100%;
 }
