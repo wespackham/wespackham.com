@@ -10,6 +10,12 @@
 
 <header>
     <h1>WES PACKHAM</h1>
+    <nav class="header-nav">
+        <a href="#about" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="/projects/" class="nav-link">Projects</a>
+        <a href="https://www.instagram.com/wes_shoots/?hl=en" target="_blank" rel="noopener" class="nav-link">Photography</a>
+    </nav>
 </header>
 
 <hr />
@@ -30,17 +36,9 @@
 
             <section class="sidebar-container">
                 <div class="experience">
-                    <div class="experience-header">
-                        <p class="experience-company">
-                            <a href="https://delbiancopo.com/specialties/" target="_blank" rel="noopener">Del Bianco Prosthetics</a>
-                        </p>
-                        <p class="experience-dates">
-                            07.2024 - 08.2024
-                        </p>
-                    </div>
-                    <p class="experience-position">
-                        WEB DEVELOPMENT INTERN
-                    </p>
+                    <h3>Web Development Intern</h3>
+                    <h4><a href="https://delbiancopo.com/specialties/" target="_blank" rel="noopener">Del Bianco Prosthetics</a></h4>
+                    <p class="dates">07.2024 - 08.2024</p>
                     <p>Managed corporate website using WordPress, updating plugins to enhance functionality and user experience. Diagnosed and fixed issues that arose and returned weekly reports of changes made.</p>
                     <p>Enhanced search engine optimization (SEO) through reorganizing site tabs, adding and updating images, and implementing keywords and meta descriptions throughout the site.</p>
                     <p>Assisted prosthetic technicians with sanding, casting, and molding of prosthetics. Organized and maintained clean work areas to ensure smooth workflow.</p>
@@ -49,9 +47,16 @@
                 <div class="experience">
                     <h3>CCI Honors Program</h3>
                     <h4>UNC Charlotte</h4>
-                    <p class="dates">08.25 - Present</p>
+                    <p class="dates">08.2025 - Present</p>
                     <p>Participated in Honors-level courses, developing critical thinking skills and research experience through two dedicated research courses. In ITSC3688H, created weekly videos discussing recent tech issues from business, ethics, and personal impact perspectives.</p>
                     <p>Authored a Research Review Paper on AI in elementary education, which was published in a collaborative book with my cohort.</p>
+                </div>
+
+                <div class="experience">
+                    <h3>Writing Managing Editor</h3>
+                    <h4>Niner Times</h4>
+                    <p class="dates">10.2025 - Present</p>
+                    <p>[Description to be added]</p>
                 </div>
             </section>
         </div>
@@ -60,10 +65,20 @@
     <main class="right-column">
         <section class="projects-container">
             <h3>Projects <a href="#" onclick="showAllProjects(); return false;" style="float: right; font-size: 0.9rem;">See All Projects</a></h3>
-            <p>
-                <a href="#" class="project-link active" onclick="showProject('unraid'); return false;">Home Server</a>,
-                <a href="#" class="project-link" onclick="showProject('data_sprint'); return false;">Data Sprint</a>
-            </p>
+            <div class="project-grid">
+                <div class="project-grid-item active" onclick="showProject('unraid')">
+                    <span>Home Server</span>
+                </div>
+                <div class="project-grid-item" onclick="showProject('data_sprint')">
+                    <span>Data Sprint</span>
+                </div>
+                <div class="project-grid-item empty">
+                    <span></span>
+                </div>
+                <div class="project-grid-item empty">
+                    <span></span>
+                </div>
+            </div>
 
             <article id="unraid" class="project active">
                 <h4 class="project-title">Personal Unraid Server</h4>
@@ -100,10 +115,10 @@
             project.classList.remove('active');
         });
 
-        // Remove active class from all project links
-        const links = document.querySelectorAll('.project-link');
-        links.forEach(link => {
-            link.classList.remove('active');
+        // Remove active class from all project grid items
+        const gridItems = document.querySelectorAll('.project-grid-item');
+        gridItems.forEach(item => {
+            item.classList.remove('active');
         });
 
         // Show selected project
@@ -112,8 +127,12 @@
             selectedProject.classList.add('active');
         }
 
-        // Add active class to clicked link
-        event.target.classList.add('active');
+        // Add active class to clicked grid item
+        if (event.target.classList.contains('project-grid-item')) {
+            event.target.classList.add('active');
+        } else if (event.target.parentElement.classList.contains('project-grid-item')) {
+            event.target.parentElement.classList.add('active');
+        }
     }
 
     function showAllProjects() {
@@ -123,10 +142,10 @@
             project.classList.add('active');
         });
 
-        // Remove active class from all project links
-        const links = document.querySelectorAll('.project-link');
-        links.forEach(link => {
-            link.classList.remove('active');
+        // Remove active class from all project grid items
+        const gridItems = document.querySelectorAll('.project-grid-item');
+        gridItems.forEach(item => {
+            item.classList.remove('active');
         });
     }
 

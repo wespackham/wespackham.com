@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /* ==================== RESET & BASE STYLES ==================== */
 * {
     margin: 0;
@@ -10,7 +12,7 @@ body {
     max-width: 1400px;
     background-color: #fafafa;
     margin: 0 2rem;
-    font-family: Arial, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
@@ -18,10 +20,30 @@ header {
     margin-top: .4rem;
     padding-top: 1.5em;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #666;
 }
 
 h1 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2em;
     font-weight: 700;
     color: #484848;
@@ -30,7 +52,7 @@ h1 {
 }
 
 h2 {
-    font-family: Arial, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     color: #2a2a2a;
     line-height: 1.5;
@@ -38,7 +60,7 @@ h2 {
 }
 
 h3 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     font-weight: 700;
     color: #484848;
@@ -46,7 +68,7 @@ h3 {
 }
 
 h4 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.05em;
     font-weight: 600;
     color: #666;
@@ -65,18 +87,10 @@ h4 a:hover {
 }
 
 p {
-    font-family: Arial, "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.95em;
     line-height: 1.7;
     color: #1a1a1a;
-}
-
-.social-links {
-
-}
-
-.links a {
-
 }
 
 .top-links {
@@ -104,24 +118,27 @@ p {
 /* ==================== DIVIDERS ==================== */
 hr {
     border: none;
-    border-top: 1px solid #ccc;
-    margin: 1.5em 0;
+    border-top: 1px solid #000;
+    margin: 1em 0 0 0;
 }
 
 /* ==================== LAYOUT ==================== */
 .main-container {
     display: flex;
-    gap: 2rem;
-    padding: 1.5rem 0;
-    margin-top: 1rem;
+    gap: 0;
+    padding: 1.5rem 0 0 0;
+    margin-top: 0;
+    border-top: 1px solid #000;
 }
 
 /* Left Column - Bio & Experience */
 .left-column {
     flex: 1;
     max-width: 35%;
-    padding-right: 2rem;
-    border-right: 2px solid #ddd;
+    padding: 1.5rem 2rem 1.5rem 0;
+    border-right: 1px solid #000;
+    height: 80vh;
+    overflow-y: auto;
 }
 
 .left-content {
@@ -131,28 +148,14 @@ hr {
 /* Right Column - Projects */
 .right-column {
     flex: 2;
-    padding-left: 2rem;
+    padding: 1.5rem 0 1.5rem 2rem;
+    height: 80vh;
+    overflow-y: auto;
 }
 
 /* ==================== TYPOGRAPHY ==================== */
 
 
-
-
-.experience-dates {
-    font-size: 0.9em;
-    color: #888;
-    font-style: italic;
-    margin-bottom: 0.5em;
-    display: inline-flex;
-    justify-content: flex-end;
-}
-
-.experience-company {
-    display: inline-flex;
-    justify-content: flex-start;
-    flex-grow: 4;
-}
 
 .sidebar-container {
     margin-top: 1.5em;
@@ -161,11 +164,43 @@ hr {
 .experience {
     margin-bottom: 2.5em;
     padding-bottom: 1.5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #000;
 }
 
-.experience-position {
-    font-variant: small-caps;
+.experience h3 {
+    margin: 0 0 0.3em 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #484848;
+}
+
+.experience h4 {
+    margin: 0 0 0.2em 0;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #666;
+}
+
+.experience h4 a {
+    color: #666;
+    text-decoration: none;
+}
+
+.experience h4 a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.experience .dates {
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 0.8em;
+}
+
+.experience p {
+    margin: 0.5em 0;
+    line-height: 1.6;
 }
 
 .experience:last-child {
@@ -237,9 +272,44 @@ hr {
     display: block;
 }
 
-.project-link.active {
+/* Project Navigation Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1rem 0 1.5rem 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+}
+
+.project-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    cursor: pointer;
+    min-height: 40px;
+}
+
+.project-grid-item.active span {
     font-weight: bold;
-    color: #000;
+    color: #484848;
+}
+
+.project-grid-item.empty {
+    cursor: default;
+}
+
+.project-grid-item span {
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.project-grid-item:not(.empty):hover span {
+    color: #666;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -259,6 +329,21 @@ hr {
         font-size: 1.5em;
     }
 
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-nav {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
     .top-links {
         float: none;
         display: block;
@@ -275,7 +360,7 @@ hr {
     .left-column {
         max-width: 100%;
         border-right: none;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 1px solid #000;
         padding-right: 0;
         padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
