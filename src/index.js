@@ -1,13 +1,19 @@
 export default {
     async fetch(request, env) {
         try {
+            const url = new URL(request.url);
+            
+            // Redirect /projects to root
+            if (url.pathname === '/projects' || url.pathname === '/projects/') {
+                return Response.redirect(new URL('/', url.origin), 301);
+            }
+            
             // Try to fetch the requested asset
             const response = await env.ASSETS.fetch(request);
 
             // If file not found (404), redirect to index.html
             if (response.status === 404) {
                 // Get the base URL and redirect to index.html
-                const url = new URL(request.url);
                 url.pathname = '/index.html';
 
                 // Fetch index.html instead
