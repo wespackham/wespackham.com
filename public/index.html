@@ -61,6 +61,29 @@
             <div class="project-card mt-2 overflow-hidden rounded-lg" data-expanded="false">
                 <div role="button" tabindex="0" class="project-trigger w-full flex items-center justify-between gap-4 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group text-left">
                     <div>
+                        <p class="text-white group-hover:text-neutral-200">Where on Campus?</p>
+                        <p class="text-white/60 text-sm">React, Leaflet, Supabase · Mar. 2026 – Present</p>
+                    </div>
+                    <button type="button" class="project-close hidden text-white/70 hover:text-white p-1 shrink-0" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6 6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
+                    <div class="min-h-0 overflow-hidden">
+                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
+                            <li>Built an interactive campus map for UNC Charlotte where students can anonymously pin favorite spots, memories, and special moments.</li>
+                            <li>Implemented Leaflet with CartoDB Positron tiles and marker clustering for dense pin areas, bounded to the campus region.</li>
+                            <li>Backed by Supabase (PostgreSQL) for pin persistence with row-level security policies and optimistic UI updates.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card mt-2 overflow-hidden rounded-lg" data-expanded="false">
+                <div role="button" tabindex="0" class="project-trigger w-full flex items-center justify-between gap-4 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group text-left">
+                    <div>
                         <p class="text-white group-hover:text-neutral-200">Campus Parking Availability Dashboard</p>
                         <p class="text-white/60 text-sm">React, Python, PostgreSQL, AWS EC2 · Jan. 2026 – Present</p>
                     </div>
@@ -95,7 +118,11 @@
                 </div>
                 <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
                     <div class="min-h-0 overflow-hidden">
-                        <p class="text-white pt-2 pb-1 pl-1 text-sm">Developed Python-based RSS aggregation and social media automation tool for university news publication. System fetches articles from multiple RSS feeds, stores metadata in SQLite database, and automatically posts to Twitter (X) through API at scheduled intervals. Implemented retry logic with backoff for API rate limiting.</p>
+                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
+                            <li>Developed Python-based RSS aggregation and social media automation tool for university news publication.</li>
+                            <li>System fetches articles from multiple RSS feeds, stores metadata in SQLite database, and automatically posts to Twitter (X) through API at scheduled intervals.</li>
+                            <li>Implemented retry logic with backoff for API rate limiting.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -114,7 +141,11 @@
                 </div>
                 <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
                     <div class="min-h-0 overflow-hidden">
-                        <p class="text-white pt-2 pb-1 pl-1 text-sm">Delivered end-to-end analytics pipeline under 2-hour deadline using Python, Pandas, Seaborn, Matplotlib. Merged 3 datasets (271K records), performed data cleaning and feature engineering, executed complex groupby/pivot operations, and created visualizations, including heatmaps and decade-trend charts.</p>
+                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
+                            <li>Delivered end-to-end analytics pipeline under 2-hour deadline using Python, Pandas, Seaborn, and Matplotlib.</li>
+                            <li>Merged 3 datasets (271K records), performed data cleaning and feature engineering, and executed complex groupby/pivot operations.</li>
+                            <li>Created visualizations including heatmaps and decade-trend charts.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -133,7 +164,10 @@
                 </div>
                 <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
                     <div class="min-h-0 overflow-hidden">
-                        <p class="text-white pt-2 pb-1 pl-1 text-sm">Built and administered home server environment running Unraid OS with Docker containerization for application deployment. Configured networking, storage management, RAID arrays, and remote access.</p>
+                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
+                            <li>Built and administered home server environment running Unraid OS with Docker containerization for application deployment.</li>
+                            <li>Configured networking, storage management, RAID arrays, and remote access.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
