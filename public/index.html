@@ -43,26 +43,34 @@
                 <p class="text-white text-xl mt-4">Experience</p>
             </div>
 
+            <a href="https://ibm.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mt-2 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group">
+                <img src="assets/ibm_logo.png" class="w-12 h-12 object-contain flex-shrink-0">
+                <div class="text-white group-hover:text-neutral-200 flex-1">
+                    <p class="flex justify-between items-baseline"><span>Data Science Intern</span> <span class="text-white/50 text-xs">May — August 2026</span></p>
+                    <p>IBM</p>
+                </div>
+            </a>
+
             <a href="https://ninertimes.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mt-2 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group">
-                <img src="assets/nt_logo.jpeg" class="w-12 h-auto flex-shrink-0">
-                <div class="text-white group-hover:text-neutral-200">
-                    <p>Writing Managing Editor</p>
+                <img src="assets/nt_logo.jpeg" class="w-12 h-12 object-contain flex-shrink-0">
+                <div class="text-white group-hover:text-neutral-200 flex-1">
+                    <p class="flex justify-between items-baseline"><span>Writing Managing Editor</span> <span class="text-white/50 text-xs">October 2025 — Present</span></p>
                     <p>Niner Times</p>
                 </div>
             </a>
 
             <a href="https://cci.charlotte.edu" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mt-3 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group">
-                <img src="assets/cci_logo.jpeg" class="w-12 h-auto flex-shrink-0">
-                <div class="text-white group-hover:text-neutral-200">
-                    <p>Instructional Assistant</p>
+                <img src="assets/cci_logo.jpeg" class="w-12 h-12 object-contain flex-shrink-0">
+                <div class="text-white group-hover:text-neutral-200 flex-1">
+                    <p class="flex justify-between items-baseline"><span>Instructional Assistant</span> <span class="text-white/50 text-xs">January 2026 — Present</span></p>
                     <p>UNC Charlotte College of Computing</p>
                 </div>
             </a>
 
             <a href="https://delbiancopo.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mt-3 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group">
-                <img src="assets/delbianco_logo.jpeg" class="w-12 h-auto flex-shrink-0">
-                <div class="text-white group-hover:text-neutral-200">
-                    <p>Web Management Intern</p>
+                <img src="assets/delbianco_logo.jpeg" class="w-12 h-12 object-contain flex-shrink-0">
+                <div class="text-white group-hover:text-neutral-200 flex-1">
+                    <p class="flex justify-between items-baseline"><span>Web Management Intern</span> <span class="text-white/50 text-xs">July — August 2024</span></p>
                     <p>Del Bianco Prosthetics & Orthotics</p>
                 </div>
             </a>
@@ -72,6 +80,31 @@
             </div>
 
             <div class="projects-container">
+            <div class="project-card mt-2 overflow-hidden rounded-lg" data-expanded="false">
+                <div role="button" tabindex="0" class="project-trigger w-full flex items-center justify-between gap-4 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group text-left">
+                    <div>
+                        <p class="text-white group-hover:text-neutral-200">Campus Parking Predictor Dashboard</p>
+                        <p class="text-white/60 text-sm">React, LightGBM, FastAPI, Supabase, AWS EC2 · Jan. 2026 – Present</p>
+                    </div>
+                    <button type="button" class="project-close hidden text-white/70 hover:text-white p-1 shrink-0" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6 6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
+                    <div class="min-h-0 overflow-hidden">
+                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
+                            <li>Built a real-time parking availability dashboard for UNC Charlotte with ML-powered predictions, scraping occupancy data from 10 parking decks every 5 minutes via a Python service on AWS EC2.</li>
+                            <li>Trained LightGBM models for near-term (3-hour, MAE=0.020, R²=0.98) and long-range (24-hour, MAE=0.042, R²=0.94) availability prediction using weather data and temporal features.</li>
+                            <li>Built a FastAPI prediction service that runs models on a timer, writing forecasts with confidence bands to Supabase, with automated Discord alerts and daily accuracy reports.</li>
+                            <li>Developed a React frontend using Chart.js to render 48-hour historical trends with a 24-hour forecast overlay and confidence bands per deck.</li>
+                        </ul>
+                        <a href="https://uncc-parking.konara.org" target="_blank" rel="noopener noreferrer" class="inline-block text-sm text-blue-400 hover:text-blue-300 underline mt-1 mb-1 pl-1">View live dashboard</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card mt-2 overflow-hidden rounded-lg" data-expanded="false">
                 <div role="button" tabindex="0" class="project-trigger w-full flex items-center justify-between gap-4 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group text-left">
                     <div>
@@ -90,29 +123,6 @@
                             <li>Built an interactive campus map for UNC Charlotte where students can anonymously pin favorite spots, memories, and special moments.</li>
                             <li>Implemented Leaflet with CartoDB Positron tiles and marker clustering for dense pin areas, bounded to the campus region.</li>
                             <li>Backed by Supabase (PostgreSQL) for pin persistence with row-level security policies and optimistic UI updates.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card mt-2 overflow-hidden rounded-lg" data-expanded="false">
-                <div role="button" tabindex="0" class="project-trigger w-full flex items-center justify-between gap-4 p-1 -mx-1 rounded-lg transition-colors hover:bg-neutral-700/50 cursor-pointer group text-left">
-                    <div>
-                        <p class="text-white group-hover:text-neutral-200">Campus Parking Availability Dashboard</p>
-                        <p class="text-white/60 text-sm">React, Python, PostgreSQL, AWS EC2 · Jan. 2026 – Present</p>
-                    </div>
-                    <button type="button" class="project-close hidden text-white/70 hover:text-white p-1 shrink-0" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 6 6 18M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="project-content grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr">
-                    <div class="min-h-0 overflow-hidden">
-                        <ul class="text-white pt-2 pb-1 pl-1 list-disc list-inside space-y-1 text-sm">
-                            <li>Built a real-time parking availability dashboard visualizing campus parking deck occupancy using a Python scraper running on AWS EC2, polling live data periodically and storing data points in a PostgreSQL database.</li>
-                            <li>Designed a lightweight, secure architecture with automated cron scheduling, environment-based credential management, and role-based database access (RLS), optimized for low-cost, always-on operation.</li>
-                            <li>Developed a React frontend using Chart.js to render interactive time-series visualizations, allowing users to explore historical availability trends by parking deck over a 24-hour window.</li>
                         </ul>
                     </div>
                 </div>
